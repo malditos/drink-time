@@ -1,0 +1,16 @@
+head
+    title Drink
+body
+    +layout
+
+template(name='layout')
+    .main-container
+        if playing
+            +playingScene
+        else
+            +main
+            //+addGames
+
+template(name='addGames')
+    input.set-category(placeholder='Category name')
+    input.set-game(placeholder='Description Game')
